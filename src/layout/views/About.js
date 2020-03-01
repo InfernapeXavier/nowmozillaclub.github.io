@@ -11,54 +11,76 @@ class About extends Component {
       timeline: 'timeline',
       timeline2018: [
         {
-          date: 'February 2018', 
-          name: 'Inception', 
+          date: 'February 2018',
+          name: 'Inception',
           desc: 'Not the movie, but rather the start of something amalgamated from an idea.',
           icon: 'fas fa-play',
           tint: 'is-success'
         },
         {
-          date: 'March 2018', 
-          name: 'GameScript', 
+          date: 'March 2018',
+          name: 'GameScript',
           desc: 'Our first event where we taught participants how to make the classic Snake game using vanilla JavaScript.',
           icon: 'fas fa-gamepad',
           tint: 'is-warning'
         },
         {
-          date: 'March 2018', 
-          name: 'Recruitments', 
+          date: 'March 2018',
+          name: 'Recruitments',
           desc: 'One event down, we agreed it was time to bring more people into the fold and help us grow.',
           icon: 'fas fa-users',
           tint: 'is-info'
         },
         {
-          date: 'April 2018', 
-          name: 'Saavishkar', 
+          date: '2018, 2019',
+          name: 'Saavishkar',
           desc: 'Working closely with the Computer Engineering Department, we organized a Final Year Project Competition for our senior year students.',
           icon: 'fas fa-project-diagram',
           tint: 'is-danger'
         },
         {
-          date: 'April 2018', 
-          name: 'Android Workshop', 
+          date: '2018, 2019',
+          name: 'Android Workshop',
           desc: 'Collaborating with our Computer Engineering Department for the second time, this event was geared towards sophomores.',
           icon: 'fab fa-android',
           tint: 'is-success'
         },
         {
-          date: 'September 2018', 
-          name: 'Recruitments', 
+          date: 'September 2018',
+          name: 'Recruitments',
           desc: 'With the start of a new academic year, we decided to bring in fresher faces who wanted to explore the world of Open Source.',
           icon: 'fas fa-users',
           tint: 'is-info'
         },
         {
-          date: 'October 2018', 
-          name: 'GitHack', 
+          date: 'October 2018',
+          name: 'GitHack',
           desc: 'In keeping with the spirit of Hacktoberfest, we conducted a workshop on Git and GitHub.',
           icon: 'fas fa-code-branch',
           tint: 'is-danger'
         },
+        {
+          date: 'February 2019',
+          name: '3-D Printing Workshop',
+          desc: 'We called in an expert on 3D printing to show us our way around a 3-D printer.',
+          icon: 'fas fa-cubes',
+          tint: 'is-primary'
+        },
+        {
+          date: 'April 2019',
+          name: 'Aagaaz',
+          desc: 'Doing what we do best, we helped out the Computer Engineering department once again with organizing a competition.',
+          icon: 'fas fa-fire',
+          tint: 'is-warning'
+        },
+        {
+          date: 'May 2019',
+          name: 'PyLearn',
+          desc: 'Our signature event, Pylearn was designed as a summer bootcamp to go from 0 to pythonista is a week. We went above and beyond traditional courses and included web scraping and other fun little tid bits!',
+          icon: 'fab fa-python',
+          tint: 'is-info'
+        }
+
       ]
     };
     this.setTimeline = this.setTimeline.bind(this);
@@ -75,13 +97,13 @@ class About extends Component {
   componentWillMount() {
     this.setTimeline();
     window.addEventListener('resize', this.setTimeline);
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.setTimeline);
   }
-  
+
   render() {
     return (
       <div className="About">
@@ -125,18 +147,20 @@ class About extends Component {
                 <header className="timeline-header">
                   <span className="tag is-large is-warning has-text-weight-bold">2018</span>
                 </header>
-                {this.state.timeline2018.map(function(item) { return (
-                <div className="timeline-item">
-                  <div className={"timeline-marker is-icon " + item.tint}>
-                    <i class={item.icon + " fa-xs"} style={{ color: 'white' }}/>
-                  </div>
-                  <div className="timeline-content">
-                    <p className="heading">{item.date}</p>
-                    <p className="title is-4">{item.name}</p>
-                    <p className="subtitle is-5">{item.desc}</p>
-                  </div>
-                </div>
-                )})}
+                {this.state.timeline2018.map(function (item) {
+                  return (
+                    <div className="timeline-item">
+                      <div className={"timeline-marker is-icon " + item.tint}>
+                        <i class={item.icon + " fa-xs"} style={{ color: 'white' }} />
+                      </div>
+                      <div className="timeline-content">
+                        <p className="heading">{item.date}</p>
+                        <p className="title is-4">{item.name}</p>
+                        <p className="subtitle is-5">{item.desc}</p>
+                      </div>
+                    </div>
+                  )
+                })}
                 <header className="timeline-header">
                   <span className="tag is-large is-warning has-text-weight-bold">NOW</span>
                 </header>

@@ -8,7 +8,7 @@ class Members extends Component {
       members: [
         { name: 'Rohit Choudhari', role: 'Club Captain', image: 'Rohit Choudhari.png', github: 'InfernapeXavier' },
         { name: 'Akash Agarwal', role: 'Build Lead', image: 'Akash Agarwal.png', github: 'akash20995' },
-        { name: 'Jay Alaknure', role: 'Advocate Lead', image: 'Jay Alaknure.png', github: 'pacondeved' },
+        { name: 'Jay Alaknure', role: 'Advocate Lead', image: 'Jay Alaknure.png', github: 'paconedved' },
         { name: 'Nishant Deshpande', role: 'Teach Lead', image: 'Nishant Deshpande.png', github: 'nishantde' },
         { name: 'Mihir Desai', role: 'Design Lead', image: 'Mihir Desai.png', github: 'mihir3k' },
       ]
@@ -28,7 +28,7 @@ class Members extends Component {
         <section className="hero is-fullheight-with-navbar is-dark">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title is-1 is-spaced">Oh hey! You found us <span role="img" aria-label="Smile">😊</span> </h1>
+              <h1 className="title is-1 is-spaced">Oh hey! You found us <span role="img" aria-label="Smile">😃</span> </h1>
               <h3 className="title is-3 is-spaced">We were there at the beginning</h3>
               <p className="subtitle is-5">Dedicated to <b>Open Source</b> and the <b>Open Web</b> culture.</p>
             </div>
@@ -54,21 +54,21 @@ class Members extends Component {
                       <div class="card">
                         <div class="card-image">
                           <figure class="image">
-                            <img className="member-image" src={"images/members/" + member.image} alt={member.name} style={{ overflow: 'hidden' }} />
+                            <img className="member-image is-clipped" src={"images/members/" + member.image} alt={member.name} />
                           </figure>
                         </div>
                         <div class="card-content">
                           <div class="media">
                             <div class="media-left">
-                              <figure class="image is-48x48">
+                              <figure class="image is-32x32">
                                 <img src={"images/logos/GitHub-Mark-120px-plus.png"} alt="Icon" />
                               </figure>
                             </div>
                             <div class="media-content">
-                              <p class="title is-6 has-text-black">{member.name}</p>
-                              <p class="subtitle is-6 has-text-black">
+                              <p class="title is-size-7 has-text-black">{member.name}</p>
+                              <p class="subtitle is-size-6 has-text-black">
                                 <a href={"https://github.com/" + member.github} target="_blank" rel="noopener noreferrer">
-                                  {member.github}
+                                  <span style={{ borderBottom: '1px dashed grey' }}>{member.github}</span>
                                 </a>
                               </p>
                             </div>
