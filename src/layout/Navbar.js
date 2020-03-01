@@ -16,9 +16,9 @@ class Navbar extends Component {
 
   setTitle() {
     if (window.innerWidth > 480) {
-      this.setState({ title: 'Network for the Open Web'});
+      this.setState({ title: 'Network for the Open Web' });
     } else {
-      this.setState({ title: 'NOW'});
+      this.setState({ title: 'NOW' });
     }
   }
 
@@ -51,25 +51,25 @@ class Navbar extends Component {
                 <span className="title">{this.state.title}</span>
               </NavLink>
               <a className="navbar-item is-hidden-desktop" href="https://facebook.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-lg fa-facebook-f"/>
+                <i className="fab fa-lg fa-facebook-f" />
               </a>
               <a className="navbar-item is-hidden-desktop" href="https://instagram.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-lg fa-instagram"/>
+                <i className="fab fa-lg fa-instagram" />
               </a>
               <a className="navbar-item is-hidden-desktop" href="https://twitter.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-lg fa-twitter"/>
+                <i className="fab fa-lg fa-twitter" />
               </a>
               <a className="navbar-item is-hidden-desktop" href="https://github.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-lg fa-github"/>
+                <i className="fab fa-lg fa-github" />
               </a>
               <div className={navbarBurger} onClick={this.toggleMenu} role="button" aria-label="menu" aria-expanded="false" data-target="nowNavbar">
-                <span aria-hidden="true"/>
-                <span aria-hidden="true"/>
-                <span aria-hidden="true"/>
+                <span aria-hidden="true" />
+                <span aria-hidden="true" />
+                <span aria-hidden="true" />
               </div>
             </div>
             <div className={navbarMenu} id="nowNavbar">
-              <div className="navbar-end">              
+              <div className="navbar-end">
                 <NavLink className="navbar-item" onClick={this.toggleMenu} to="/about">
                   <span className="subtitle">
                     <span>About</span>
@@ -81,12 +81,13 @@ class Navbar extends Component {
                     <span>Events</span>
                     <span className="is-hidden-desktop has-text-grey-light"> &mdash; What we do</span>
                   </span>
-                </NavLink><NavLink className="navbar-item" onClick={this.toggleMenu} to="/members">
+                </NavLink>
+                {/* <NavLink className="navbar-item" onClick={this.toggleMenu} to="/members">
                   <span className="subtitle">
                     <span>Members</span>
                     <span className="is-hidden-desktop has-text-grey-light"> &mdash; Meet the team</span>
                   </span>
-                </NavLink>
+                </NavLink> */}
                 <NavLink className="navbar-item" onClick={this.toggleMenu} to="/contact">
                   <span className="subtitle">
                     <span>Contact</span>
@@ -94,16 +95,16 @@ class Navbar extends Component {
                   </span>
                 </NavLink>
                 <a className="navbar-item is-hidden-touch" href="https://facebook.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-lg fa-facebook-f"/>
+                  <i className="fab fa-lg fa-facebook-f" />
                 </a>
                 <a className="navbar-item is-hidden-touch" href="https://instagram.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-lg fa-instagram"/>
+                  <i className="fab fa-lg fa-instagram" />
                 </a>
                 <a className="navbar-item is-hidden-touch" href="https://twitter.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-lg fa-twitter"/>
+                  <i className="fab fa-lg fa-twitter" />
                 </a>
                 <a className="navbar-item is-hidden-touch" href="https://github.com/nowmozillaclub" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-lg fa-github"/>
+                  <i className="fab fa-lg fa-github" />
                 </a>
               </div>
             </div>
