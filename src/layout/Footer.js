@@ -28,11 +28,6 @@ class Footer extends Component {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="subtitle is-size-6 is-uppercase has-text-weight-bold" to="/members">
-                      Members
-                    </NavLink>
-                  </li>
-                  <li>
                     <NavLink className="subtitle is-size-6 is-uppercase has-text-weight-bold" to="/gamescript">
                       GameScript
                     </NavLink>
